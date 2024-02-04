@@ -22,6 +22,7 @@ class ProjectSeeder extends Seeder
             $array_project->image = $project_item["image"];
             $array_project->topic = $project_item["topic"];
             $array_project->type_id = $project_item["type_id"];
+            $array_project->technology_id = $project_item["technology_id"];
 
             $array_project->save();
         }

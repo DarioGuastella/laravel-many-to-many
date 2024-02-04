@@ -14,5 +14,11 @@
             <a href="{{ route('admin.projects.index') }}" class="btn btn-primary mt-3">Torna alla projects list</a>
 
         </div>
+        {{-- <div class="row">
+            <p> {{ $categories->name }}</p>
+        </div>
+        <div class="row">
+            <p> {{ $technologies->name }}</p>
+        </div> --}}
     </div>
 @endsection
