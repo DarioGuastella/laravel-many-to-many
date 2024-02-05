@@ -16,15 +16,15 @@ class ProjectSeeder extends Seeder
         $array_project = config("projects");
 
         foreach ($array_project as $project_item) {
-            $array_project = new Project();
-            $array_project->title = $project_item["title"];
-            $array_project->description = $project_item["description"];
-            $array_project->image = $project_item["image"];
-            $array_project->topic = $project_item["topic"];
-            $array_project->type_id = $project_item["type_id"];
-            $array_project->technology_id = $project_item["technology_id"];
-
-            $array_project->save();
+            //Rimuovo technology_id dai dati perchè non va scritto sulla tabella "projects"
+            $technology_id = $project_item["technology_id"];
+            unset($project_item["technology_id"]);
+            //Creo un nuovo progetto, lo popolo, salvo
+            $project = new Project();
+            $project->fill($project_item);
+            $project->save();
+            //Collego al progetto appena salvato la tecnologia recuperata precedentemente
+            $project->technologies()->attach($technology_id);
         }
     }
 }

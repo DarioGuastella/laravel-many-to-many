@@ -35,9 +35,9 @@ class TechnologySeeder extends Seeder
         ];
 
         foreach ($technologies as $technology) {
-            $newTag = new Technology();
-            $newTag->fill($technology);
-            $newTag->save();
+            $newTechnology = new Technology();
+            $newTechnology->fill($technology);
+            $newTechnology->save();
         }
     }
 }

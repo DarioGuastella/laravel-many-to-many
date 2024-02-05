@@ -7,7 +7,7 @@ return [
         "image" => "https://www.coverbrowser.com/image/action-comics/1-1.jpg",
         "topic" => "Web development",
         "type_id" => 3,
-        "technology_id" => 1
+        "technology_id" => [1, 2]
     ],
     [
         "title" => "My second project",

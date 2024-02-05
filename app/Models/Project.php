@@ -14,7 +14,7 @@ class Project extends Model
         "image",
         "topic",
         "type_id",
-        "technology_id"
+        // "technology_id"
     ];
 
     public function type()

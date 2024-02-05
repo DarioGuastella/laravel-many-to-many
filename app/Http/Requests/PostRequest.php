@@ -22,10 +22,10 @@ class PostRequest extends FormRequest
     public function rules(): array
     {
         return [
-            "name" => ["required", "min:5", "max:50"],
+            "title" => ["required", "min:5", "max:50"],
             "description" => ["required", "min:5", "max:300"],
             "type_id" => ["nullable", "exists:types,id"],
-            "technologies" => ["exists:technologies,id"],
+            "technologies" => ["nullable", "exists:technologies,id"]
         ];
     }
 }
